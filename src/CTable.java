@@ -8,13 +8,18 @@ public class CTable {
 
         for (int playerID=0; playerID<totalPlayer; playerID++) {
             for (int i = 0; i < 12; i++) {
-                pieceNO = playerOBJ[playerID].getRandomPublic(0,27);
+                pieceNO = playerOBJ[playerID].getRandomPublic(0, 27);
                 System.out.println(" pieceNO : " + pieceNO);
-                pieceWasAvailable=playerOBJ[playerID].takePiece(pieceNO);
+                pieceWasAvailable = playerOBJ[playerID].takePiece(pieceNO);
 
                 // his C++ version does this but we need a boolean value instead of int
-                //if (pieceWasAvailable){System.out.println("piece available");}
-
+                if (pieceWasAvailable) {
+                 System.out.println("piece available");
+                } else {
+                    System.out.println("////////////////////////////////////////////////");
+                    System.out.println("piece not available - try to take a piece again");
+                    i--;
+                }
             }
         }
     }
