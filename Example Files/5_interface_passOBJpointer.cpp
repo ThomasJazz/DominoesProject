@@ -104,9 +104,6 @@ int main(void){
     struct timeval time;
     int pieceID;
 
-    gettimeofday(&time, NULL);
-    srandom((unsigned int) time.tv_usec);
-
     CDomino dominoOBJ,*dominoPointer;
     dominoOBJ.API();
     dominoPointer=&dominoOBJ;

@@ -1,0 +1,93 @@
+[0|0] Status(1)  [1|0] Status(1)  [2|0] Status(1)  [3|0] Status(1)  [4|0] Status(1)  [5|0] Status(1)  [6|0] Status(1)  
+[1|1] Status(1)  [2|1] Status(1)  [3|1] Status(1)  [4|1] Status(1)  [5|1] Status(1)  [6|1] Status(1)  
+[2|2] Status(1)  [3|2] Status(1)  [4|2] Status(1)  [5|2] Status(1)  [6|2] Status(1)  
+[3|3] Status(1)  [4|3] Status(1)  [5|3] Status(1)  [6|3] Status(1)  
+[4|4] Status(1)  [5|4] Status(1)  [6|4] Status(1)  
+[5|5] Status(1)  [6|5] Status(1)  
+[6|6] Status(1)  
+myDomino stores 28 pieces.
+take Piece - one by one
+pieceNo = 0
+[0|0] available = 1
+playerID = 0[0|0] available = 0
+pieceNo = 1
+[1|0] available = 1
+playerID = 0[1|0] available = 0
+pieceNo = 2
+[2|0] available = 1
+playerID = 0[2|0] available = 0
+pieceNo = 3
+[3|0] available = 1
+playerID = 0[3|0] available = 0
+pieceNo = 4
+[4|0] available = 1
+playerID = 0[4|0] available = 0
+pieceNo = 5
+[5|0] available = 1
+playerID = 0[5|0] available = 0
+pieceNo = 6
+[6|0] available = 1
+playerID = 0[6|0] available = 0
+pieceNo = 7
+[1|1] available = 1
+playerID = 0[1|1] available = 0
+pieceNo = 8
+[2|1] available = 1
+playerID = 0[2|1] available = 0
+pieceNo = 9
+[3|1] available = 1
+playerID = 0[3|1] available = 0
+pieceNo = 10
+[4|1] available = 1
+playerID = 0[4|1] available = 0
+pieceNo = 11
+[5|1] available = 1
+playerID = 0[5|1] available = 0
+pieceNo = 12
+[6|1] available = 1
+playerID = 0[6|1] available = 0
+pieceNo = 13
+[2|2] available = 1
+playerID = 0[2|2] available = 0
+pieceNo = 14
+[3|2] available = 1
+playerID = 1[3|2] available = 0
+pieceNo = 15
+[4|2] available = 1
+playerID = 1[4|2] available = 0
+pieceNo = 16
+[5|2] available = 1
+playerID = 1[5|2] available = 0
+pieceNo = 17
+[6|2] available = 1
+playerID = 1[6|2] available = 0
+pieceNo = 18
+[3|3] available = 1
+playerID = 1[3|3] available = 0
+pieceNo = 19
+[4|3] available = 1
+playerID = 1[4|3] available = 0
+pieceNo = 20
+[5|3] available = 1
+playerID = 1[5|3] available = 0
+pieceNo = 21
+[6|3] available = 1
+playerID = 1[6|3] available = 0
+pieceNo = 22
+[4|4] available = 1
+playerID = 1[4|4] available = 0
+pieceNo = 23
+[5|4] available = 1
+playerID = 1[5|4] available = 0
+pieceNo = 24
+[6|4] available = 1
+playerID = 1[6|4] available = 0
+pieceNo = 25
+[5|5] available = 1
+playerID = 1[5|5] available = 0
+pieceNo = 26
+[6|5] available = 1
+playerID = 1[6|5] available = 0
+pieceNo = 27
+[6|6] available = 1
+playerID = 1[6|6] available = 0

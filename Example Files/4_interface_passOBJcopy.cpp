@@ -77,7 +77,7 @@ class CDomino : public CRandom{
 			data_domino mypiece;
 			int rangeLow=0, rangeHigh=1;
 			for(int right=0;right<7;right++){
-
+				// this loop fills the left and right data for each domino
 				for(int left=right; left<7;left++){
 					mypiece.right=right;
 					mypiece.left=left;
@@ -102,12 +102,12 @@ class CPlayer : public CRandom{
 	public:
 		CPlayer(){}  // constructor
 		~CPlayer(){} // destructor
-		deque<data_domino> myDomino, playerDominoPieces[2];
-		class CDomino player_dominoOBJ;
+		deque<data_domino> myDomino, playerDominoPieces[2]; // create 2 deque's
+		class CDomino player_dominoOBJ; // creates CDomino object
 
-		void API(CDomino receive_dominoOBJ){
-			player_dominoOBJ=receive_dominoOBJ;
-			takePiece();
+		void API(CDomino receive_dominoOBJ){ // the domino 
+			player_dominoOBJ=receive_dominoOBJ; //sets the players domino object to the received parameter
+			takePiece(); // call takePiece
 		}
 	private:
 		// PASSING OBJECT AS PARAMETER - FOR DIFFERENT CLASSES INTERFACE
@@ -118,8 +118,8 @@ class CPlayer : public CRandom{
 
 			data_domino takenPiece;
 			cout<< "take Piece - one by one"<<endl;
-			for(playerID=0;playerID<totalPlayers;playerID++){
-				for(pieceNo=counter;pieceNo<max;pieceNo++){
+			for(playerID=0;playerID<totalPlayers;playerID++){ //runs # of players times
+				for(pieceNo=counter;pieceNo<max;pieceNo++){ //runs for each piece
 					counter++;
 					cout<<"pieceNo = " << pieceNo<<endl;
 
@@ -140,17 +140,13 @@ int main(void){
 
     struct timeval time;
 
-    gettimeofday(&time, NULL);
-    srandom((unsigned int) time.tv_usec);
-
-    CDomino dominoOBJ;
-    dominoOBJ.API();
+    CDomino dominoOBJ; 
+    dominoOBJ.API(); // calls domino version of API
 
 	// EXAMPLE: PASSING OBJECT AS PARAMETER
     //          - FOR DIFFERENT CLASSES INTERFACE
     CPlayer playerOBJ;
-    playerOBJ.API(dominoOBJ);
-
+    playerOBJ.API(dominoOBJ); // player version of API with dominoOBJ
 
     return EXIT_SUCCESS;
 }
