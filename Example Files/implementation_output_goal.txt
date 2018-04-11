@@ -1,0 +1,320 @@
+[0|0]  [1|0]  [2|0]  [3|0]  [4|0]  [5|0]  [6|0]  
+[1|1]  [2|1]  [3|1]  [4|1]  [5|1]  [6|1]  
+[2|2]  [3|2]  [4|2]  [5|2]  [6|2]  
+[3|3]  [4|3]  [5|3]  [6|3]  
+[4|4]  [5|4]  [6|4]  
+[5|5]  [6|5]  
+[6|6]  
+myDomino stores 28 pieces.
+selecting pieces and giving 12 pieces to each player
+ pieceNO : 0
+[0|0] available = 1
+ [0|0] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 3
+[3|0] available = 1
+ [3|0] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 21
+[6|3] available = 1
+ [6|3] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 12
+[6|1] available = 1
+ [6|1] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 14
+[3|2] available = 1
+ [3|2] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 6
+[6|0] available = 1
+ [6|0] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 1
+[1|0] available = 1
+ [1|0] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 19
+[4|3] available = 1
+ [4|3] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 19
+[4|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 26
+[6|5] available = 1
+ [6|5] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 10
+[4|1] available = 1
+ [4|1] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 14
+[3|2] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 23
+[5|4] available = 1
+ [5|4] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 0
+[0|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 1
+[1|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 14
+[3|2] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 18
+[3|3] available = 1
+ [3|3] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 0
+[0|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 10
+[4|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 1
+[1|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 11
+[5|1] available = 1
+ [5|1] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 19
+[4|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 16
+[5|2] available = 1
+ [5|2] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 26
+[6|5] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 23
+[5|4] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 14
+[3|2] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 2
+[2|0] available = 1
+ [2|0] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 18
+[3|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 11
+[5|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 19
+[4|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 25
+[5|5] available = 1
+ [5|5] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 21
+[6|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 7
+[1|1] available = 1
+ [1|1] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 1
+[1|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 20
+[5|3] available = 1
+ [5|3] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 9
+[3|1] available = 1
+ [3|1] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 17
+[6|2] available = 1
+ [6|2] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 21
+[6|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 27
+[6|6] available = 1
+ [6|6] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 10
+[4|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 6
+[6|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 27
+[6|6] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 20
+[5|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 21
+[6|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 18
+[3|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 2
+[2|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 17
+[6|2] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 24
+[6|4] available = 1
+ [6|4] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 7
+[1|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 12
+[6|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 21
+[6|3] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 13
+[2|2] available = 1
+ [2|2] just taken - no longer available from pile = 0
+piece available
+ pieceNO : 6
+[6|0] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 7
+[1|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 10
+[4|1] available = 0
+NOT AVAILABLE
+////////////////////////////////////////////////
+piece not available - try to take a piece again
+ pieceNO : 4
+[4|0] available = 1
+ [4|0] just taken - no longer available from pile = 0
+piece available
+playerID = 0 stores 12 pieces.
+[0|0] available = 1
+[3|0] available = 1
+[6|3] available = 1
+[6|1] available = 1
+[3|2] available = 1
+[6|0] available = 1
+[1|0] available = 1
+[4|3] available = 1
+[6|5] available = 1
+[4|1] available = 1
+[5|4] available = 1
+[3|3] available = 1
+playerID = 1 stores 12 pieces.
+[5|1] available = 1
+[5|2] available = 1
+[2|0] available = 1
+[5|5] available = 1
+[1|1] available = 1
+[5|3] available = 1
+[3|1] available = 1
+[6|2] available = 1
+[6|6] available = 1
+[6|4] available = 1
+[2|2] available = 1
+[4|0] available = 1
+check pointer effect on dominoOBJ
+[0|0] available = 0
+[1|0] available = 0
+[2|0] available = 0
+[3|0] available = 0
+[4|0] available = 0
+[5|0] available = 1
+[6|0] available = 0
+[1|1] available = 0
+[2|1] available = 1
+[3|1] available = 0
+[4|1] available = 0
+[5|1] available = 0
+[6|1] available = 0
+[2|2] available = 0
+[3|2] available = 0
+[4|2] available = 1
+[5|2] available = 0
+[6|2] available = 0
+[3|3] available = 0
+[4|3] available = 0
+[5|3] available = 0
+[6|3] available = 0
+[4|4] available = 1
+[5|4] available = 0
+[6|4] available = 0
+[5|5] available = 0
+[6|5] available = 0
+[6|6] available = 0
