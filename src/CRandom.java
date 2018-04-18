@@ -1,5 +1,3 @@
-package dominosprojectcs380;
-
 import java.util.Random;
 
 /**

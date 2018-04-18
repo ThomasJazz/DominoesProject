@@ -2,7 +2,7 @@ public class CTable {
     public CPlayer[] playerOBJ = null;
 
     public void selecting_pieces(){
-        int pieceNO, pieceWasAvailable, totalPlayer = 2;
+        int pieceNO, totalPlayer = 2, pieceWasAvailable;
 
         System.out.println("selecting pieces and giving 12 pieces to each player");
 
@@ -13,7 +13,7 @@ public class CTable {
                 pieceWasAvailable = playerOBJ[playerID].takePiece(pieceNO);
 
                 // his C++ version does this but we need a boolean value instead of int
-                if (pieceWasAvailable) {
+                if (pieceWasAvailable == 1) {
                  System.out.println("piece available");
                 } else {
                     System.out.println("////////////////////////////////////////////////");
@@ -24,7 +24,7 @@ public class CTable {
         }
     }
     public void showPlayerHand() {
-        data_domino showPiece = new data_domino();
+        DataDomino showPiece = new DataDomino();
         int totalPlayer = 2;
         for (int playerID = 0; playerID < totalPlayer; playerID++){
             System.out.println("playerID = " + playerID + " stores " +

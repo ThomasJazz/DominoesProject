@@ -1,7 +1,4 @@
-package dominosprojectcs380;
-
 /**
- *
  * @author cs380003_14
  */
 public class DataDomino

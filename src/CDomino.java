@@ -2,7 +2,7 @@
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
 public class CDomino {
-    public LinkedList<data_domino> myDomino;
+    public LinkedList<DataDomino> myDomino;
 
     public void API(){
         init();
@@ -13,8 +13,8 @@ public class CDomino {
      * @param pieceID
      * @return
      */
-    public data_domino getPiece(int pieceID){
-        data_domino myPiece = myDomino.get(pieceID);
+    public DataDomino getPiece(int pieceID){
+        DataDomino myPiece = myDomino.get(pieceID);
         System.out.println("[" + myPiece.left + "|" + myPiece.right + "]"
             + " available = " + myPiece.available);
         myDomino.set(pieceID, myPiece); // equivalent to myDomino.at(pieceID)=myPiece
@@ -22,14 +22,14 @@ public class CDomino {
     }
 
     private void init(){
-        data_domino myPiece = new data_domino();
+        DataDomino myPiece = new DataDomino();
         for (int right = 0; right < 7; right++) {
             for (int left = right;left <7 ; left++) {
                 myPiece.right = right;
                 myPiece.left = left;
                 myPiece.available = 1;
                 System.out.println("[" + myPiece.left + "|" + myPiece.right + "]" + " ");
-                myDomino.push(myPiece);
+                myDomino.add(myPiece);
             }
             System.out.println();
         }
