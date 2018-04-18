@@ -2,7 +2,7 @@
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
 public class CDomino {
-    public LinkedList<DataDomino> myDomino;
+    public LinkedList<DataDomino> myDomino = new LinkedList<>();
 
     public void API(){
         init();

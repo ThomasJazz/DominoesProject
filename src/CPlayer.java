@@ -5,16 +5,20 @@ import java.util.LinkedList;
  * @author cs380003_14
  */
 public class CPlayer extends CRandom {
-    LinkedList<DataDomino> gotHand;
-    CDomino playerPDominoOBJ = null;
+    LinkedList<DataDomino> gotHand = new LinkedList<>();
+    CDomino playerPDominoOBJ = new CDomino();
     
     // Passing Object as Pointer - for different classes interface.
-    public void API(CDomino recieveDominoPointerOBJ)
-    {
+    public void API(CDomino recieveDominoPointerOBJ) {
         int pieceID;
         playerPDominoOBJ = recieveDominoPointerOBJ;
     }
-    
+
+    /**
+     *
+     * @param pieceNo
+     * @return
+     */
     public int takePiece(int pieceNo) {
         int playerID;
         int counter = 0, max = 14, numberWasAvailable = 0;
@@ -44,4 +48,3 @@ public class CPlayer extends CRandom {
         return (numberWasAvailable);
     }
 }
-

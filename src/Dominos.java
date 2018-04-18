@@ -5,6 +5,9 @@ public class Dominos {
         dominoOBJ.API();
 
         CPlayer[] playerOBJ = new CPlayer[2];
+        playerOBJ[0] = new CPlayer();
+        playerOBJ[1] = new CPlayer();
+
         playerOBJ[0].API(dominoOBJ);
         playerOBJ[1].API(dominoOBJ);
 
