@@ -15,8 +15,8 @@ public class CDomino {
      */
     public DataDomino getPiece(int pieceID){
         DataDomino myPiece = myDomino.get(pieceID);
-        System.out.println("[" + myPiece.left + "|" + myPiece.right + "]"
-            + " available = " + myPiece.available);
+        System.out.println("[" + myPiece.getLeft() + "|" + myPiece.getRight() + "]"
+            + " available = " + myPiece.getAvailable());
         myDomino.set(pieceID, myPiece); // equivalent to myDomino.at(pieceID)=myPiece
         return myPiece;
     }
@@ -33,6 +33,6 @@ public class CDomino {
             }
             System.out.println();
         }
-        System.out.println("myDomino stores " + myDomino.size() + " pieces.\n");
+        System.out.println("myDomino stores " + myDomino.size() + " pieces.");
     }
 }

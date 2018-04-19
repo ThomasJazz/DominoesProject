@@ -14,7 +14,7 @@ public class Dominos {
         CTable myTableOBJ = new CTable();
         myTableOBJ.API(playerOBJ);
 
-        System.out.println("Check pointer effect on dominoOBJ");
+        // System.out.println("Check pointer effect on dominoOBJ");
         for(pieceID = 0;pieceID < 28; pieceID++)
             dominoOBJ.getPiece(pieceID);
     }

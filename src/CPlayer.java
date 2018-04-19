@@ -30,18 +30,15 @@ public class CPlayer extends CRandom {
             
             // Set the domino to "No Longer Available".
             takenPiece.setAvailable(0);
-            
+
             // MODIFY THIS STATEMENT WHEN CLASSES ARE MERGER!!!!!!!!!!!!!!!!!!!!
             playerPDominoOBJ.myDomino.set(pieceNo, takenPiece);
-            
-            System.out.println("[" + takenPiece.getLeft() + "|" + takenPiece.getRight() + "]"
-                             + " Just Taken - No Longer Avaliable From The Pile = 0");
             
             // Set the domino to "Available" in Player's hand.
             takenPiece.setAvailable(1);
             
-            // Push the domino onto the LinkedList.
-            gotHand.addFirst(takenPiece);
+            // add the domino onto the LinkedList
+            gotHand.add(takenPiece);
         } else {
             System.out.println("NOT AVAILABLE");
         }
