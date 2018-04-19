@@ -22,13 +22,13 @@ public class CDomino {
     }
 
     private void init(){
-        DataDomino myPiece = new DataDomino();
         for (int right = 0; right < 7; right++) {
-            for (int left = right;left <7 ; left++) {
+            for (int left = right;left < 7 ; left++) {
+                DataDomino myPiece = new DataDomino();
                 myPiece.right = right;
                 myPiece.left = left;
                 myPiece.available = 1;
-                System.out.println("[" + myPiece.left + "|" + myPiece.right + "]" + " ");
+                System.out.print("[" + myPiece.left + "|" + myPiece.right + "]" + " ");
                 myDomino.add(myPiece);
             }
             System.out.println();
