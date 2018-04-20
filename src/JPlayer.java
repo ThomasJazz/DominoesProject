@@ -12,13 +12,17 @@ public class JPlayer extends JRandom {
     }
 
     /**
-     * Takes a piece from the player boneyard and adds it to their hand, if it can be added
+     * Takes a piece from the player boneyard and adds it to their hand, if it
+     * can be added
+     *
      * @param pieceNo   The ID of the piece to be taken
      * @return          0 if the piece is unavailable, 1 if the piece is available
      */
     public void takePiece(int pieceNo) {
         DataDomino takenPiece = playerBoneyard.getPiece(pieceNo);
         System.out.println("Taken Piece: " + takenPiece);
+        
+        // Remove the Domino from myDominoList and add it into got 
         hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
     }
 
@@ -28,13 +32,15 @@ public class JPlayer extends JRandom {
 
     public void draw(int playerID){
         int pieceNo;
-
+        
+        // Add a random domino from myDominoList to hand by removing it from myDominoList.
         JRandom randomPieceNum = new JRandom();
-        pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size()-1);
-        hand.add(playerBoneyard.getMyDominoList().remove());
+        pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size() - 1);
+        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
 
-        System.out.println("Player " + playerID + " has drawn piece:" + hand.get(hand.size()-1));
+        System.out.println("Player " + playerID + " has drawn piece: " + hand.get(hand.size() - 1));
     }
+    
     public JDomino getPlayerBoneyard(){
         return playerBoneyard;
     }
