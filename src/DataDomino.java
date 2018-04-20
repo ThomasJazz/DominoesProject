@@ -1,7 +1,7 @@
 public class DataDomino
 {
     private int right, left, available;
-
+    
     public DataDomino()
     {
     }
@@ -47,14 +47,14 @@ public class DataDomino
     {
         this.available = available;
     }
-
+    
     public void flip()
     {
         int right = this.right;
         this.right = this.left;
         this.left = right;
     }
-
+    
     @Override
     public String toString()
     {
