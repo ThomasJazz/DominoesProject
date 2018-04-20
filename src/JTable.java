@@ -67,4 +67,12 @@ public class JTable {
         dominos.addLast(rightDomino);
         botSide = rightDomino.getRight();
     }
+    
+    // Prints out the whole game.
+    public void printGame()
+    {
+        System.out.println("*********** Dominos In Play ***********\n");
+        System.out.println(dominos);
+        System.out.println();
+    }
 }
