@@ -7,9 +7,9 @@ public class JTable {
     private LinkedList<DataDomino> dominos; // will contain the two dominos that can be played upon
     private int topSide, botSide;
 
-    public JTable(JDomino recieveDominoPointerOBJ){
+    public JTable(JDomino receiveDominoPointerOBJ){
         playerOBJ = null;
-        boneyard = recieveDominoPointerOBJ;
+        boneyard = receiveDominoPointerOBJ;
         dominos = new LinkedList<>();
     }
 
