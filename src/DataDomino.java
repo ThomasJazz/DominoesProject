@@ -1,5 +1,3 @@
-package dominosprojectcs380;
-
 /**
  * @author cs380003_14
  */
@@ -9,6 +7,7 @@ public class DataDomino
     
     public DataDomino()
     {
+        this.left = 9; // this is how we will mark empty dominos on the board
     }
     
     public DataDomino(DataDomino otherDomino)
@@ -56,6 +55,9 @@ public class DataDomino
     @Override
     public String toString()
     {
-        return(available + " [" + left + "|" + right + "]" + " ");
+        if (left == 9) // if domino is just an empty spot
+            return "-";
+        else
+            return(available + " [" + left + "|" + right + "]" + " ");
     }
 }
