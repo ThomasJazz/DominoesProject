@@ -13,9 +13,9 @@ public class JPlayer extends JRandom {
     }
 
     /**
-     *
-     * @param pieceNo
-     * @return
+     * Takes a piece from the player boneyard and adds it to their hand, if it can be added
+     * @param pieceNo   The ID of the piece to be taken
+     * @return          0 if the piece is unavailable, 1 if the piece is available
      */
     public int takePiece(int pieceNo) {
         int numberWasAvailable = 0;

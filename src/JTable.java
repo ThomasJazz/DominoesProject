@@ -1,10 +1,19 @@
+import java.util.*;
+
 public class JTable {
-    public JPlayer[] playerOBJ = null;
-    public JDomino boneyard = new JDomino();
+    public JPlayer[] playerOBJ;
+    public JDomino boneyard;
+    private List<DataDomino> dominos; // will contain the two dominos that can be played upon
+    private int topSide, botSide;
+
+    public JTable(){
+        playerOBJ = null;
+        boneyard = new JDomino();
+        dominos = new LinkedList<>();
+    }
 
     public void selecting_pieces(){
         int pieceNo, totalPlayer = 2, pieceWasAvailable;
-
         System.out.println("take piece one by one");
 
         for (int playerID=0; playerID<totalPlayer; playerID++) {
@@ -38,6 +47,7 @@ public class JTable {
 
         syncBoneyards();
     }
+
     public void showPlayerHand() {
         DataDomino showPiece = new DataDomino();
         int totalPlayer = 2;
@@ -54,6 +64,14 @@ public class JTable {
         showPlayerHand();
     }
 
+    public int getTopSide(){
+        return topSide;
+    }
+
+    public int getBotSide(){
+        return botSide;
+    }
+    // syncs the player boneyards to the master boneyard
     public void syncBoneyards(){
         for (JPlayer player:playerOBJ) {
             player.updateBoneyard(boneyard);

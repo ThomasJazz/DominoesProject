@@ -3,7 +3,9 @@ public class Dominos {
        new Dominos().play(); // best to leave main method according to my old DS teacher
     }
     public void play(){
+        boolean winner = false;
         int pieceID;
+
         JDomino dominoOBJ = new JDomino();
         dominoOBJ.API();
 
@@ -20,5 +22,14 @@ public class Dominos {
         System.out.println("****************************");
         System.out.println("Player 1: " + playerOBJ[0].gotHand);
         System.out.println("Player 2: " + playerOBJ[1].gotHand);
+
+        int i = 0;
+        /* now we actually start taking turns.
+        // real dominoes would have the player with the highest domino go first, but we just
+        start with player[0]*/
+        while (!winner) {
+            int playerTurn = i%2; // use mod 2 to toggle player turn
+            i++;
+        }
     }
 }
