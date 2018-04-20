@@ -1,3 +1,5 @@
+package dominosprojectcs380;
+
 public class Dominos {
     public static void main(String[] args) {
        int pieceID;
@@ -13,10 +15,17 @@ public class Dominos {
 
         CTable myTableOBJ = new CTable();
         myTableOBJ.API(playerOBJ);
-
+        
+        System.out.println("****************************");
+        System.out.println("Player 1: " + playerOBJ[0].gotHand);
+        System.out.println("Player 2: " + playerOBJ[1].gotHand);
+        //For Debug
         // System.out.println("Check pointer effect on dominoOBJ");
-        for(pieceID = 0;pieceID < 28; pieceID++)
-            dominoOBJ.getPiece(pieceID);
+//        for(pieceID = 0; pieceID < 28; pieceID++)
+//            dominoOBJ.getPiece(pieceID);
+        
+        
+        
     }
 
 }

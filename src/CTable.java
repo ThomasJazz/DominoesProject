@@ -1,3 +1,5 @@
+package dominosprojectcs380;
+
 public class CTable {
     public CPlayer[] playerOBJ = null;
 
@@ -7,19 +9,21 @@ public class CTable {
         System.out.println("take piece one by one");
 
         for (int playerID=0; playerID<totalPlayer; playerID++) {
-            for (int i = 0; i < 14; i++) { // not sure why I only had this iterate 12 times before...
+            for (int i = 0; i < 7; i++) { // not sure why I only had this iterate 12 times before...
                 // get unique pieceNo values from 0-27
-                if (playerID == 0)
-                    pieceNo = playerID + i;
-                else
-                    pieceNo = (playerID + 13) + i;
+                CRandom randomPieceNum = new CRandom();
+                pieceNo = randomPieceNum.getRandomPublic(0, 27);
 
                 System.out.println("pieceNo = " + pieceNo);
                 pieceWasAvailable = playerOBJ[playerID].takePiece(pieceNo);
 
-                if (pieceWasAvailable == 1) {
+                if (pieceWasAvailable == 1)
+                {
                     System.out.println("piece available");
-                } else {
+                }
+                
+                else
+                {
                     System.out.println("////////////////////////////////////////////////");
                     System.out.println("piece not available - try to take a piece again");
                     i--;

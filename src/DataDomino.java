@@ -1,9 +1,22 @@
+package dominosprojectcs380;
+
 /**
  * @author cs380003_14
  */
 public class DataDomino
 {
-    protected int right, left, available;
+    private int right, left, available;
+    
+    public DataDomino()
+    {
+    }
+    
+    public DataDomino(DataDomino otherDomino)
+    {
+        this.right = otherDomino.getRight();
+        this.left = otherDomino.getLeft();
+        this.available = otherDomino.getAvailable();
+    }
     
     
     // ******** GETTER METHODS ********
@@ -38,5 +51,11 @@ public class DataDomino
     public void setAvailable(int available)
     {
         this.available = available;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return(available + " [" + left + "|" + right + "]" + " ");
     }
 }

@@ -1,16 +1,16 @@
+package dominosprojectcs380;
+
 import java.util.LinkedList;
 
-/**
- *
- * @author cs380003_14
- */
+
 public class CPlayer extends CRandom {
     LinkedList<DataDomino> gotHand = new LinkedList<>();
     CDomino playerPDominoOBJ = new CDomino();
     
+    boolean winner;
+    
     // Passing Object as Pointer - for different classes interface.
     public void API(CDomino recieveDominoPointerOBJ) {
-        int pieceID;
         playerPDominoOBJ = recieveDominoPointerOBJ;
     }
 
@@ -20,10 +20,10 @@ public class CPlayer extends CRandom {
      * @return
      */
     public int takePiece(int pieceNo) {
-        int playerID;
-        int counter = 0, max = 14, numberWasAvailable = 0;
+        int numberWasAvailable = 0;
         
         DataDomino takenPiece = playerPDominoOBJ.getPiece(pieceNo);
+        System.out.println("Taken Piece: " + takenPiece);
         
         if(takenPiece.getAvailable() == 1) {
             numberWasAvailable = takenPiece.getAvailable();
@@ -33,12 +33,15 @@ public class CPlayer extends CRandom {
 
             // MODIFY THIS STATEMENT WHEN CLASSES ARE MERGER!!!!!!!!!!!!!!!!!!!!
             playerPDominoOBJ.myDomino.set(pieceNo, takenPiece);
+            System.out.println(playerPDominoOBJ.myDomino);
             
             // Set the domino to "Available" in Player's hand.
-            takenPiece.setAvailable(1);
+            //takenPiece.setAvailable(1);
+            System.out.println(playerPDominoOBJ.myDomino);
             
             // add the domino onto the LinkedList
             gotHand.add(takenPiece);
+            
         } else {
             System.out.println("NOT AVAILABLE");
         }
