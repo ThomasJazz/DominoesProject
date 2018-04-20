@@ -1,16 +1,22 @@
-package dominosprojectcs380;
+/**
+ * DOMINOES RULES THAT OUR CODE FOLLOWS
+ * Game starts by having players draw 7 dominoes each.
+ * 1st round:   Player 0 places a domino on the board
+ * 2nd+ round:  Players alternate placing dominoes on each end of the domino line.
+ *              If a player CANNOT play with the dominoes in their hand, they keep drawing
+ *              until they CAN play or until there are 2 dominoes left in the boneyard
+ * Winning:     The game is over if either: a player has played all their dominoes or
+ *              the boneyard is empty and neither player is able to play
+ */
 
-import java.util.Random;
 
 public class Dominos {
-    
-    JDomino dominoOBJ;
-    JPlayer[] playerOBJ;
-    JTable myTableOBJ;
-    Random rand;
+    private JDomino dominoOBJ;
+    private JPlayer[] playerOBJ;
+    private JTable myTableOBJ;
     
     public static void main(String[] args) {
-        new Dominos().play(); // best to leave main method according to my old DS teacher
+       new Dominos().play(); // best to leave main method according to my old DS teacher
     }
 
     public void play() {
@@ -37,14 +43,19 @@ public class Dominos {
 
         System.out.println("Full List:" + dominoOBJ);
         // ************ FOR TESTING ************
-
+        
+        /* for testing
+        playerOBJ[0].draw(0);
+        System.out.println("New hand after drawing: \n" + playerOBJ[0].getHand());
+         */
         // now we actually start taking turns.
         // real dominoes would have the player with the highest domino go first, but we just
+        //start with player[0]
+        //myTableOBJ.
+        JRandom rand = new JRandom();
+        int start = rand.getRandom(0,1); // randomly decide who starts first
         
-        
-        
-        for (int i = 0; !winner; i++)
-        {
+        for (int i = start; !winner; i++) {
             // use mod 2 to toggle player turn
             int playerTurn = i % 2;
             
@@ -72,8 +83,7 @@ public class Dominos {
     }
     
     // Check which domino the player can play.
-    public int canPlay(JPlayer player)
-    {
+    public int canPlay(JPlayer player) {
         int top = myTableOBJ.getTopSide();
         int bot = myTableOBJ.getBotSide();
         
