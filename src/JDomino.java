@@ -3,7 +3,7 @@
 import java.util.LinkedList;
 
 public class JDomino {
-    public LinkedList<DataDomino> myDominoList = new LinkedList<>();
+    private LinkedList<DataDomino> myDominoList = new LinkedList<>();
 
     public void API(){
         init();
@@ -16,10 +16,6 @@ public class JDomino {
      */
     public DataDomino getPiece(int pieceID){
         DataDomino myPiece = myDominoList.get(pieceID);
-        
-        // Print is for Debug
-//        System.out.println("[" + myPiece.getLeft() + "|" + myPiece.getRight() + "]"
-//            + " available = " + myPiece.getAvailable());
         
         myDominoList.set(pieceID, myPiece); // equivalent to myDominoList.at(pieceID)=myPiece
         return myPiece;
@@ -53,11 +49,11 @@ public class JDomino {
 
     /**
      * First we clear the players boneyard list. Then we add the masters boneyard list
-     * @param master
+     * @param incoming
      */
-    public void updateList(JDomino master) {
+    public void updateList(JDomino incoming) {
         myDominoList.clear();
-        myDominoList.addAll(master.getMyDominoList());
+        myDominoList.addAll(incoming.getMyDominoList());
     }
 
     public boolean add(DataDomino incoming){
@@ -66,5 +62,9 @@ public class JDomino {
     }
     public String toString(){
         return myDominoList.toString();
+    }
+
+    public boolean isEmpty(){
+        return (myDominoList.size() == 0);
     }
 }

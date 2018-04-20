@@ -4,12 +4,8 @@
 public class DataDomino
 {
     private int right, left, available;
-    
-    public DataDomino()
-    {
-        this.left = 9; // this is how we will mark empty dominos on the board
-    }
-    
+
+    public DataDomino(){}
     public DataDomino(DataDomino otherDomino)
     {
         this.right = otherDomino.getRight();

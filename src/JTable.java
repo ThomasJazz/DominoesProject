@@ -6,9 +6,9 @@ public class JTable {
     private List<DataDomino> dominos; // will contain the two dominos that can be played upon
     private int topSide, botSide;
 
-    public JTable(){
+    public JTable(JDomino receiveDominoPointerOBJ){
         playerOBJ = null;
-        boneyard = new JDomino();
+        boneyard = receiveDominoPointerOBJ;
         dominos = new LinkedList<>();
     }
 
@@ -20,7 +20,7 @@ public class JTable {
             for (int i = 0; i < 7; i++) { // not sure why I only had this iterate 12 times before...
                 // get unique pieceNo values from 0-27
                 JRandom randomPieceNum = new JRandom();
-                pieceNo = randomPieceNum.getRandomPublic(0, 27);
+                pieceNo = randomPieceNum.getRandomPublic(0, boneyard.getMyDominoList().size()-1);
 
                 System.out.println("pieceNo = " + pieceNo);
                 pieceWasAvailable = playerOBJ[playerID].takePiece(pieceNo);
@@ -31,21 +31,17 @@ public class JTable {
                     i--;
                 }
             }
-            System.out.println(playerOBJ[1].getPlayerBoneyard());
         }
 
-        for (DataDomino domino: playerOBJ[1].getPlayerBoneyard().getMyDominoList()) {
-            // if the domino at index i is still available after drafting phase, we move it into
-            // the 'master' boneyard
-            if (domino.getAvailable()==1)
-                boneyard.add(domino);
-        }
+
         System.out.println("\n'Master boneyard' now contains " + boneyard.getMyDominoList().size()
         + " pieces: ");
         System.out.println(boneyard.toString());
         System.out.println("");
+    }
 
-        syncBoneyards();
+    public void updateMaster(JDomino playerBoneyard){
+        boneyard.updateList(playerBoneyard);
     }
 
     public void showPlayerHand() {
@@ -53,7 +49,7 @@ public class JTable {
         int totalPlayer = 2;
         for (int playerID = 0; playerID < totalPlayer; playerID++){
             System.out.println("playerID = " + playerID + " stores " +
-                playerOBJ[playerID].gotHand.size() + " pieces.\n");
+                playerOBJ[playerID].hand.size() + " pieces.\n");
         }
     }
 
@@ -70,11 +66,5 @@ public class JTable {
 
     public int getBotSide(){
         return botSide;
-    }
-    // syncs the player boneyards to the master boneyard
-    public void syncBoneyards(){
-        for (JPlayer player:playerOBJ) {
-            player.updateBoneyard(boneyard);
-        }
     }
 }
