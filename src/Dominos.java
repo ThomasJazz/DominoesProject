@@ -59,22 +59,27 @@ public class Dominos {
             // use mod 2 to toggle player turn
             int playerTurn = i % 2;
             
-            // If no playable pieces in players hand, then draw.
-            if (canPlay(playerOBJ[playerTurn]) == -1) {
-                playerOBJ[playerTurn].draw(playerTurn);
+            // if the player has a domino they can play, they play it.
+            if (canPlay(playerOBJ[playerTurn]) != -1) {
+
             }
             
-            // If neither player has playable piece and myDominoList
-            // is empty, then there is a DRAW, Game Over, no winner.
-            if (myTableOBJ.boneyard.isEmpty() && canPlay(playerOBJ[0]) == -1 && canPlay(playerOBJ[1]) == -1) {
-                winner = true;
-                System.out.println("Neither player can play and boneyard is empty!"
-                        + "\nExiting game...");
+            else {
+                // player draws until they can play a domino or until boneyard is empty
+                while (canPlay(playerOBJ[playerTurn]) == -1 && !myTableOBJ.boneyard.isEmpty())
+                    playerOBJ[playerTurn].draw(playerTurn);
+
+                // if neither player can play and the boneyard is empty, the game is over
+                if (myTableOBJ.boneyard.isEmpty() && canPlay(playerOBJ[0]) == -1 && canPlay(playerOBJ[1]) == -1) {
+                    winner = true;
+                    System.out.println("Neither player can play and boneyard is empty!" +
+                            "\nExiting game...");
+                }
             }
             
             // If one of the players no longer has any dominos in
             // hand, then they win. Game Over.
-            if (playerOBJ[playerTurn].getHand().size() == 0) {
+            if (playerOBJ[playerTurn].getHand().size() == 0){
                 winner = true;
                 System.out.println("Player " + playerTurn + " has played all their dominos!");
                 System.out.println("**Player " + playerTurn + " wins!!**");
