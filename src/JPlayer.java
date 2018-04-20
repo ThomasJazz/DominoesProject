@@ -1,11 +1,8 @@
-package dominosprojectcs380;
-
 import java.util.LinkedList;
 
 public class JPlayer extends JRandom {
-
-    LinkedList<DataDomino> hand = new LinkedList<>();
-    JDomino playerBoneyard = new JDomino();
+    private LinkedList<DataDomino> hand = new LinkedList<>();
+    private JDomino playerBoneyard = new JDomino();
 
     boolean winner;
 
@@ -18,8 +15,8 @@ public class JPlayer extends JRandom {
      * Takes a piece from the player boneyard and adds it to their hand, if it
      * can be added
      *
-     * @param pieceNo The ID of the piece to be taken
-     * @return 0 if the piece is unavailable, 1 if the piece is available
+     * @param pieceNo   The ID of the piece to be taken
+     * @return          0 if the piece is unavailable, 1 if the piece is available
      */
     public void takePiece(int pieceNo) {
         DataDomino takenPiece = playerBoneyard.getPiece(pieceNo);
@@ -41,7 +38,7 @@ public class JPlayer extends JRandom {
         pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size() - 1);
         hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
         
-        System.out.println("Player " + playerID + " has drawn pieceNo: " + pieceNo);
+        System.out.println("Player " + playerID + " has drawn piece: " + hand.get(hand.size() - 1));
     }
 
     public JDomino getPlayerBoneyard() {
