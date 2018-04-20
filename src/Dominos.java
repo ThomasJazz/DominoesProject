@@ -62,7 +62,9 @@ public class Dominos {
             // if the player has a domino they can play, they play it.
             if (canPlay(playerOBJ[playerTurn]) != -1) {
 
-            } else {
+            }
+            
+            else {
                 // player draws until they can play a domino or until boneyard is empty
                 while (canPlay(playerOBJ[playerTurn]) == -1 && !myTableOBJ.boneyard.isEmpty())
                     playerOBJ[playerTurn].draw(playerTurn);
@@ -74,13 +76,14 @@ public class Dominos {
                             "\nExiting game...");
                 }
             }
-
+            
+            // If one of the players no longer has any dominos in
+            // hand, then they win. Game Over.
             if (playerOBJ[playerTurn].getHand().size() == 0){
                 winner = true;
                 System.out.println("Player " + playerTurn + " has played all their dominos!");
                 System.out.println("**Player " + playerTurn + " wins!!**");
             }
-
         }
     }
     
@@ -90,11 +93,15 @@ public class Dominos {
         int bot = myTableOBJ.getBotSide();
         
         for (int i = 0; i < player.getHand().size(); i++){
-            if (player.getHand().get(i).getLeft() == top || player.getHand().get(i).getRight() == top)
+            if (player.getHand().get(i).getLeft() == top || player.getHand().get(i).getRight() == top) {
+                // Return the playable domino index in hand.
                 return i;
+            }
 
-            if (player.getHand().get(i).getLeft() == bot || player.getHand().get(i).getRight() == bot)
+            if (player.getHand().get(i).getLeft() == bot || player.getHand().get(i).getRight() == bot) {
+                // Return the playable domino index in hand.
                 return i;
+            }
         }
         
         // if we never find a match in the players hand, we return -1
