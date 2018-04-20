@@ -58,6 +58,16 @@ public class JTable {
         return botSide;
     }
     
+    public void setLeftDomino(DataDomino leftDomino){
+        dominos.addFirst(leftDomino);
+        topSide = leftDomino.getLeft();
+    }
+
+    public void setRightDomino(DataDomino rightDomino){
+        dominos.addLast(rightDomino);
+        botSide = rightDomino.getRight();
+    }
+    
     // Prints out the whole game.
     public void printGame()
     {
