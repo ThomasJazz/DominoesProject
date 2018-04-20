@@ -1,8 +1,10 @@
+package dominosprojectcs380;
+
 import java.util.LinkedList;
 
-
 public class JPlayer extends JRandom {
-    LinkedList<DataDomino> gotHand = new LinkedList<>();
+
+    LinkedList<DataDomino> hand = new LinkedList<>();
     JDomino playerBoneyard = new JDomino();
 
     boolean winner;
@@ -13,39 +15,36 @@ public class JPlayer extends JRandom {
     }
 
     /**
-     * Takes a piece from the player boneyard and adds it to their hand, if it can be added
-     * @param pieceNo   The ID of the piece to be taken
-     * @return          0 if the piece is unavailable, 1 if the piece is available
+     * Takes a piece from the player boneyard and adds it to their hand, if it
+     * can be added
+     *
+     * @param pieceNo The ID of the piece to be taken
+     * @return 0 if the piece is unavailable, 1 if the piece is available
      */
-    public int takePiece(int pieceNo) {
-        int numberWasAvailable = 0;
-
+    public void takePiece(int pieceNo) {
         DataDomino takenPiece = playerBoneyard.getPiece(pieceNo);
         System.out.println("Taken Piece: " + takenPiece);
 
-        if(takenPiece.getAvailable() == 1) {
-            numberWasAvailable = takenPiece.getAvailable();
-
-            // Set the domino to "No Longer Available".
-            takenPiece.setAvailable(0);
-
-            // MODIFY THIS STATEMENT WHEN CLASSES ARE MERGER!!!!!!!!!!!!!!!!!!!!
-            playerBoneyard.myDominoList.set(pieceNo, takenPiece);
-
-            // add the domino onto the LinkedList
-            gotHand.add(takenPiece);
-
-        } else {
-            System.out.println("********NOT AVAILABLE********");
-        }
-        return (numberWasAvailable);
+        // Remove the Domino from myDominoList and add it into got 
+        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
     }
 
-    public JDomino getPlayerBoneyard(){
+    public LinkedList<DataDomino> getHand() {
+        return hand;
+    }
+
+    public void draw(int playerID) {
+        int pieceNo;
+        
+        // Add a random domino from myDominoList to hand by removing it from myDominoList.
+        JRandom randomPieceNum = new JRandom();
+        pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size() - 1);
+        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
+        
+        System.out.println("Player " + playerID + " has drawn pieceNo: " + pieceNo);
+    }
+
+    public JDomino getPlayerBoneyard() {
         return playerBoneyard;
-    }
-
-    public void updateBoneyard(JDomino input){
-        playerBoneyard.updateList(input);
     }
 }

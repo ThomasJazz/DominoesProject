@@ -1,4 +1,7 @@
+package dominosprojectcs380;
+
 import java.util.*;
+
 
 public class JTable {
     public JPlayer[] playerOBJ;
@@ -6,9 +9,9 @@ public class JTable {
     private List<DataDomino> dominos; // will contain the two dominos that can be played upon
     private int topSide, botSide;
 
-    public JTable(){
+    public JTable(JDomino recieveDominoPointerOBJ){
         playerOBJ = null;
-        boneyard = new JDomino();
+        boneyard = recieveDominoPointerOBJ;
         dominos = new LinkedList<>();
     }
 
@@ -17,35 +20,20 @@ public class JTable {
         System.out.println("take piece one by one");
 
         for (int playerID=0; playerID<totalPlayer; playerID++) {
-            for (int i = 0; i < 7; i++) { // not sure why I only had this iterate 12 times before...
+            System.out.println("\nPlayer " + playerID + " is Drawing:");
+            
+            for (int i = 0; i < 10; i++) { // not sure why I only had this iterate 12 times before...
                 // get unique pieceNo values from 0-27
                 JRandom randomPieceNum = new JRandom();
-                pieceNo = randomPieceNum.getRandomPublic(0, 27);
-
-                System.out.println("pieceNo = " + pieceNo);
-                pieceWasAvailable = playerOBJ[playerID].takePiece(pieceNo);
-
-                if (pieceWasAvailable == 1) {
-                    System.out.println("piece available");
-                } else {
-                    i--;
-                }
+                pieceNo = randomPieceNum.getRandom(0, boneyard.getMyDominoList().size() - 1);
+                playerOBJ[playerID].takePiece(pieceNo);
             }
-            System.out.println(playerOBJ[1].getPlayerBoneyard());
         }
-
-        for (DataDomino domino: playerOBJ[1].getPlayerBoneyard().getMyDominoList()) {
-            // if the domino at index i is still available after drafting phase, we move it into
-            // the 'master' boneyard
-            if (domino.getAvailable()==1)
-                boneyard.add(domino);
-        }
+        
         System.out.println("\n'Master boneyard' now contains " + boneyard.getMyDominoList().size()
         + " pieces: ");
         System.out.println(boneyard.toString());
-        System.out.println("");
-
-        syncBoneyards();
+        System.out.println();
     }
 
     public void showPlayerHand() {
@@ -53,17 +41,17 @@ public class JTable {
         int totalPlayer = 2;
         for (int playerID = 0; playerID < totalPlayer; playerID++){
             System.out.println("playerID = " + playerID + " stores " +
-                playerOBJ[playerID].gotHand.size() + " pieces.\n");
+                playerOBJ[playerID].getHand().size() + " pieces.\n");
         }
     }
-
+    
     public void API(JPlayer[] players){
         playerOBJ = players; // copy players array into playerOBJ
 
         selecting_pieces();
         showPlayerHand();
     }
-
+    
     public int getTopSide(){
         return topSide;
     }
@@ -71,10 +59,12 @@ public class JTable {
     public int getBotSide(){
         return botSide;
     }
-    // syncs the player boneyards to the master boneyard
-    public void syncBoneyards(){
-        for (JPlayer player:playerOBJ) {
-            player.updateBoneyard(boneyard);
-        }
+    
+    // Prints out the whole game.
+    public void printGame()
+    {
+        System.out.println("*********** Dominos In Play ***********\n");
+        System.out.println(dominos);
+        System.out.println();
     }
 }

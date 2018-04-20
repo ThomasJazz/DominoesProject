@@ -1,13 +1,12 @@
-/**
- * @author cs380003_14
- */
+package dominosprojectcs380;
+
+
 public class DataDomino
 {
     private int right, left, available;
     
     public DataDomino()
     {
-        this.left = 9; // this is how we will mark empty dominos on the board
     }
     
     public DataDomino(DataDomino otherDomino)
@@ -52,12 +51,16 @@ public class DataDomino
         this.available = available;
     }
     
+    public void flip()
+    {
+        int right = this.right;
+        this.right = this.left;
+        this.left = right;
+    }
+    
     @Override
     public String toString()
     {
-        if (left == 9) // if domino is just an empty spot
-            return "-";
-        else
-            return(available + " [" + left + "|" + right + "]" + " ");
+        return(" [" + left + "|" + right + "]" + " ");
     }
 }
