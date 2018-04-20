@@ -1,5 +1,3 @@
-package dominosprojectcs380;
-
 /* have to use LinkedList instead of Deque because java version of Deque doesn't allow us to access
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
@@ -48,7 +46,7 @@ public class JDomino {
     
     public boolean isEmpty()
     {
-        return (myDominoList.size()== 0);
+        return (myDominoList.size() == 0);
     }
     
     @Override
