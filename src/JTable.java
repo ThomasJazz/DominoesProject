@@ -36,6 +36,7 @@ public class JTable {
         System.out.println(boneyard.toString());
         System.out.println("");
 
+        syncBoneyards();
     }
     public void showPlayerHand() {
         DataDomino showPiece = new DataDomino();
@@ -51,5 +52,11 @@ public class JTable {
 
         selecting_pieces();
         showPlayerHand();
+    }
+
+    public void syncBoneyards(){
+        for (JPlayer player:playerOBJ) {
+            player.updateBoneyard(boneyard);
+        }
     }
 }

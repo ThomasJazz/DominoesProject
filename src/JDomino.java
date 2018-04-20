@@ -51,6 +51,10 @@ public class JDomino {
         return myDominoList.remove(index);
     }
 
+    /**
+     * First we clear the players boneyard list. Then we add the masters boneyard list
+     * @param master
+     */
     public void updateList(JDomino master) {
         myDominoList.clear();
         myDominoList.addAll(master.getMyDominoList());
