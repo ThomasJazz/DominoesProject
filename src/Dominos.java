@@ -14,12 +14,12 @@ public class Dominos {
     private JDomino dominoOBJ;
     private JPlayer[] playerOBJ;
     private JTable myTableOBJ;
-
+    
     public static void main(String[] args) {
        new Dominos().play(); // best to leave main method according to my old DS teacher
     }
-    
-    public void play(){
+
+    public void play() {
         boolean winner = false;
         int pieceID;
 
@@ -43,7 +43,7 @@ public class Dominos {
 
         System.out.println("Full List:" + dominoOBJ);
         // ************ FOR TESTING ************
-
+        
         /* for testing
         playerOBJ[0].draw(0);
         System.out.println("New hand after drawing: \n" + playerOBJ[0].getHand());
@@ -54,11 +54,11 @@ public class Dominos {
         //myTableOBJ.
         JRandom rand = new JRandom();
         int start = rand.getRandom(0,1); // randomly decide who starts first
-
+        
         for (int i = start; !winner; i++) {
             // use mod 2 to toggle player turn
             int playerTurn = i % 2;
-
+            
             // if the player has a domino they can play, they play it.
             if (canPlay(playerOBJ[playerTurn]) != -1) {
 
@@ -92,7 +92,7 @@ public class Dominos {
         int top = myTableOBJ.getTopSide();
         int bot = myTableOBJ.getBotSide();
         
-        for (int i = 0; i < player.getHand().size(); i++){
+        for (int i = 0; i < player.getHand().size(); i++) {
             if (player.getHand().get(i).getLeft() == top || player.getHand().get(i).getRight() == top) {
                 // Return the playable domino index in hand.
                 return i;
