@@ -1,11 +1,11 @@
-/**
- * @author cs380003_14
- */
 public class DataDomino
 {
     private int right, left, available;
 
-    public DataDomino(){}
+    public DataDomino()
+    {
+    }
+    
     public DataDomino(DataDomino otherDomino)
     {
         this.right = otherDomino.getRight();
@@ -48,14 +48,16 @@ public class DataDomino
         this.available = available;
     }
 
-    public void flip(){
+    public void flip()
+    {
         int right = this.right;
         this.right = this.left;
         this.left = right;
     }
 
     @Override
-    public String toString() {
-        return(" [" + left + "|" + right + "]" + "");
+    public String toString()
+    {
+        return(" [" + left + "|" + right + "]" + " ");
     }
 }
