@@ -1,6 +1,3 @@
-package dominosprojectcs380;
-
-
 public class DataDomino
 {
     private int right, left, available;
