@@ -35,25 +35,37 @@ public class Dominos {
         myTableOBJ.API(playerOBJ);
 
         System.out.println("****************************");
-        System.out.println("Player 1: " + playerOBJ[0].hand);
-        System.out.println("Player 2: " + playerOBJ[1].hand);
+        System.out.println("Player 1: " + playerOBJ[0].getHand());
+        System.out.println("Player 2: " + playerOBJ[1].getHand());
 
+        /* for testing
+        playerOBJ[0].draw(0);
+        System.out.println("New hand after drawing: \n" + playerOBJ[0].getHand());
+         */
         /* now we actually start taking turns.
         // real dominoes would have the player with the highest domino go first, but we just
         start with player[0]*/
         //myTableOBJ.
-        for (int i = 0; !winner; i++) {
+        JRandom rand = new JRandom();
+        int start = rand.getRandom(0,1); // randomly decide who starts first
+
+        for (int i = start; !winner; i++) {
             int playerTurn = i%2; // use mod 2 to toggle player turn
-            i++;
 
-            if (canPlay(playerOBJ[playerTurn]) == -1){
-                playerOBJ[playerTurn].draw(playerTurn);
-            }
+            // if the player has a domino they can play, they play it.
+            if (canPlay(playerOBJ[playerTurn]) != -1) {
 
-            if (myTableOBJ.boneyard.isEmpty() && canPlay(playerOBJ[0]) == -1 && canPlay(playerOBJ[1]) == -1) {
-                winner = true;
-                System.out.println("Neither player can play and boneyard is empty!" +
-                        "\nExiting game...");
+            } else {
+                // player draws until they can play a domino or until boneyard is empty
+                while (canPlay(playerOBJ[playerTurn]) == -1 && !myTableOBJ.boneyard.isEmpty())
+                    playerOBJ[playerTurn].draw(playerTurn);
+
+                // if neither player can play and the boneyard is empty, the game is over
+                if (myTableOBJ.boneyard.isEmpty() && canPlay(playerOBJ[0]) == -1 && canPlay(playerOBJ[1]) == -1) {
+                    winner = true;
+                    System.out.println("Neither player can play and boneyard is empty!" +
+                            "\nExiting game...");
+                }
             }
 
             if (playerOBJ[playerTurn].getHand().size() == 0){

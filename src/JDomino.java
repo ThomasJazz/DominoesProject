@@ -43,23 +43,6 @@ public class JDomino {
         return myDominoList.get(index);
     }
 
-    public DataDomino remove(int index){
-        return myDominoList.remove(index);
-    }
-
-    /**
-     * First we clear the players boneyard list. Then we add the masters boneyard list
-     * @param incoming
-     */
-    public void updateList(JDomino incoming) {
-        myDominoList.clear();
-        myDominoList.addAll(incoming.getMyDominoList());
-    }
-
-    public boolean add(DataDomino incoming){
-        myDominoList.add(incoming);
-        return true;
-    }
     public String toString(){
         return myDominoList.toString();
     }

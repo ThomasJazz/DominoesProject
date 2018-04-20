@@ -47,13 +47,15 @@ public class DataDomino
     {
         this.available = available;
     }
-    
+
+    public void flip(){
+        int right = this.right;
+        this.right = this.left;
+        this.left = right;
+    }
+
     @Override
-    public String toString()
-    {
-        if (left == 9) // if domino is just an empty spot
-            return "-";
-        else
-            return(available + " [" + left + "|" + right + "]" + " ");
+    public String toString() {
+        return(" [" + left + "|" + right + "]" + "");
     }
 }

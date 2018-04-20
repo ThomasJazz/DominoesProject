@@ -1,8 +1,8 @@
 import java.util.LinkedList;
 
 public class JPlayer extends JRandom {
-    LinkedList<DataDomino> hand = new LinkedList<>();
-    JDomino playerBoneyard = new JDomino();
+    private LinkedList<DataDomino> hand = new LinkedList<>();
+    private JDomino playerBoneyard = new JDomino();
 
     boolean winner;
 
@@ -16,37 +16,24 @@ public class JPlayer extends JRandom {
      * @param pieceNo   The ID of the piece to be taken
      * @return          0 if the piece is unavailable, 1 if the piece is available
      */
-    public int takePiece(int pieceNo) {
-        int numberWasAvailable = 1;
-
+    public void takePiece(int pieceNo) {
         DataDomino takenPiece = playerBoneyard.getPiece(pieceNo);
         System.out.println("Taken Piece: " + takenPiece);
         hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
-
-        return (numberWasAvailable);
     }
-
 
     public LinkedList<DataDomino> getHand(){
         return hand;
     }
 
-    public int draw(int playerID){
-        int pieceNo, pieceWasAvailable;
+    public void draw(int playerID){
+        int pieceNo;
 
         JRandom randomPieceNum = new JRandom();
-        pieceNo = randomPieceNum.getRandomPublic(0, playerBoneyard.getMyDominoList().size());
+        pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size()-1);
+        hand.add(playerBoneyard.getMyDominoList().remove());
 
-        System.out.println("Player " + playerID + " has drawn pieceNo: " + pieceNo);
-        pieceWasAvailable = this.takePiece(pieceNo);
-
-        if (pieceWasAvailable == 1) {
-            System.out.println("Piece available");
-            return pieceWasAvailable;
-        } else {
-            System.out.println("Piece unavailable... Drawing again");
-            return draw(playerID);
-        }
+        System.out.println("Player " + playerID + " has drawn piece:" + hand.get(hand.size()-1));
     }
     public JDomino getPlayerBoneyard(){
         return playerBoneyard;
