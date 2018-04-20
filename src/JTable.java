@@ -19,7 +19,7 @@ public class JTable {
 
         for (int playerID=0; playerID<totalPlayer; playerID++) {
             System.out.println("\nPlayer " + playerID + " is Drawing...");
-
+            
             for (int i = 0; i < 10; i++) { // not sure why I only had this iterate 12 times before...
                 // get unique pieceNo values from 0-27
                 JRandom randomPieceNum = new JRandom();
@@ -27,7 +27,7 @@ public class JTable {
                 playerOBJ[playerID].takePiece(pieceNo);
             }
         }
-
+        
         System.out.println("\n'The boneyard' now contains " + boneyard.getMyDominoList().size()
         + " pieces: ");
         System.out.println(boneyard.toString());
@@ -42,14 +42,14 @@ public class JTable {
                 playerOBJ[playerID].getHand().size() + " pieces.\n");
         }
     }
-
+    
     public void API(JPlayer[] players){
         playerOBJ = players; // copy players array into playerOBJ
 
         selecting_pieces();
         showPlayerHand();
     }
-
+    
     public int getTopSide(){
         return topSide;
     }
@@ -57,7 +57,7 @@ public class JTable {
     public int getBotSide(){
         return botSide;
     }
-
+    
     public void setLeftDomino(DataDomino leftDomino){
         dominos.addFirst(leftDomino);
         topSide = leftDomino.getLeft();
