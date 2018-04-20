@@ -2,6 +2,7 @@
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
 
+
 public class JDomino {
     private LinkedList<DataDomino> myDominoList = new LinkedList<>();
 
@@ -42,12 +43,14 @@ public class JDomino {
     public DataDomino getDomino(int index){
         return myDominoList.get(index);
     }
-
+    
+    public boolean isEmpty()
+    {
+        return (myDominoList.size() == 0);
+    }
+    
+    @Override
     public String toString(){
         return myDominoList.toString();
-    }
-
-    public boolean isEmpty(){
-        return (myDominoList.size() == 0);
     }
 }
