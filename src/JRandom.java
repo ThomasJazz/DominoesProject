@@ -1,9 +1,6 @@
 import java.util.Random;
 
-/**
- *
- * @author cs380003_14
- */
+
 public class JRandom
 {
     Random rand = new Random();
