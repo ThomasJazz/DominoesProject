@@ -1,6 +1,9 @@
+package dominosprojectcs380;
+
 /* have to use LinkedList instead of Deque because java version of Deque doesn't allow us to access
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
+
 
 public class JDomino {
     private LinkedList<DataDomino> myDominoList = new LinkedList<>();
@@ -42,29 +45,14 @@ public class JDomino {
     public DataDomino getDomino(int index){
         return myDominoList.get(index);
     }
-
-    public DataDomino remove(int index){
-        return myDominoList.remove(index);
+    
+    public boolean isEmpty()
+    {
+        return (myDominoList.size()== 0);
     }
-
-    /**
-     * First we clear the players boneyard list. Then we add the masters boneyard list
-     * @param incoming
-     */
-    public void updateList(JDomino incoming) {
-        myDominoList.clear();
-        myDominoList.addAll(incoming.getMyDominoList());
-    }
-
-    public boolean add(DataDomino incoming){
-        myDominoList.add(incoming);
-        return true;
-    }
+    
+    @Override
     public String toString(){
         return myDominoList.toString();
-    }
-
-    public boolean isEmpty(){
-        return (myDominoList.size() == 0);
     }
 }

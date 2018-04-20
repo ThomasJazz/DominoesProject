@@ -1,6 +1,9 @@
+package dominosprojectcs380;
+
 import java.util.LinkedList;
 
 public class JPlayer extends JRandom {
+
     LinkedList<DataDomino> hand = new LinkedList<>();
     JDomino playerBoneyard = new JDomino();
 
@@ -12,43 +15,36 @@ public class JPlayer extends JRandom {
     }
 
     /**
-     * Takes a piece from the player boneyard and adds it to their hand, if it can be added
-     * @param pieceNo   The ID of the piece to be taken
-     * @return          0 if the piece is unavailable, 1 if the piece is available
+     * Takes a piece from the player boneyard and adds it to their hand, if it
+     * can be added
+     *
+     * @param pieceNo The ID of the piece to be taken
+     * @return 0 if the piece is unavailable, 1 if the piece is available
      */
-    public int takePiece(int pieceNo) {
-        int numberWasAvailable = 1;
-
+    public void takePiece(int pieceNo) {
         DataDomino takenPiece = playerBoneyard.getPiece(pieceNo);
         System.out.println("Taken Piece: " + takenPiece);
-        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
 
-        return (numberWasAvailable);
+        // Remove the Domino from myDominoList and add it into got 
+        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
     }
 
-
-    public LinkedList<DataDomino> getHand(){
+    public LinkedList<DataDomino> getHand() {
         return hand;
     }
 
-    public int draw(int playerID){
-        int pieceNo, pieceWasAvailable;
-
+    public void draw(int playerID) {
+        int pieceNo;
+        
+        // Add a random domino from myDominoList to hand by removing it from myDominoList.
         JRandom randomPieceNum = new JRandom();
-        pieceNo = randomPieceNum.getRandomPublic(0, playerBoneyard.getMyDominoList().size());
-
+        pieceNo = randomPieceNum.getRandom(0, playerBoneyard.getMyDominoList().size() - 1);
+        hand.add(playerBoneyard.getMyDominoList().remove(pieceNo));
+        
         System.out.println("Player " + playerID + " has drawn pieceNo: " + pieceNo);
-        pieceWasAvailable = this.takePiece(pieceNo);
-
-        if (pieceWasAvailable == 1) {
-            System.out.println("Piece available");
-            return pieceWasAvailable;
-        } else {
-            System.out.println("Piece unavailable... Drawing again");
-            return draw(playerID);
-        }
     }
-    public JDomino getPlayerBoneyard(){
+
+    public JDomino getPlayerBoneyard() {
         return playerBoneyard;
     }
 }

@@ -1,9 +1,8 @@
+package dominosprojectcs380;
+
 import java.util.Random;
 
-/**
- *
- * @author cs380003_14
- */
+
 public class JRandom
 {
     Random rand = new Random();
@@ -14,7 +13,7 @@ public class JRandom
      * @param rangeHigh the high end of the range to be sent
      * @return  the "random" number we generated in getRandomPrivate
      */
-    public int getRandomPublic(int rangeLow, int rangeHigh)
+    public int getRandom(int rangeLow, int rangeHigh)
     {
         int myRandScaled;
         myRandScaled = getRandomPrivate(rangeLow, rangeHigh);
