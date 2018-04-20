@@ -1,11 +1,9 @@
-package dominosprojectcs380;
-
 /* have to use LinkedList instead of Deque because java version of Deque doesn't allow us to access
 * the object at any given index like the C++ version does*/
 import java.util.LinkedList;
 
-public class CDomino {
-    public LinkedList<DataDomino> myDomino = new LinkedList<>();
+public class JDomino {
+    public LinkedList<DataDomino> myDominoList = new LinkedList<>();
 
     public void API(){
         init();
@@ -17,13 +15,13 @@ public class CDomino {
      * @return
      */
     public DataDomino getPiece(int pieceID){
-        DataDomino myPiece = myDomino.get(pieceID);
+        DataDomino myPiece = myDominoList.get(pieceID);
         
         // Print is for Debug
 //        System.out.println("[" + myPiece.getLeft() + "|" + myPiece.getRight() + "]"
 //            + " available = " + myPiece.getAvailable());
         
-        myDomino.set(pieceID, myPiece); // equivalent to myDomino.at(pieceID)=myPiece
+        myDominoList.set(pieceID, myPiece); // equivalent to myDominoList.at(pieceID)=myPiece
         return myPiece;
     }
 
@@ -35,10 +33,34 @@ public class CDomino {
                 myPiece.setLeft(left);
                 myPiece.setAvailable(1);
                 System.out.print(myPiece.toString());
-                myDomino.add(myPiece);
+                myDominoList.add(myPiece);
             }
             System.out.println();
         }
-        System.out.println("myDomino stores " + myDomino.size() + " pieces.");
+        System.out.println("myDominoList stores " + myDominoList.size() + " pieces.");
+    }
+    public LinkedList<DataDomino> getMyDominoList(){
+        return myDominoList;
+    }
+
+    public DataDomino getDomino(int index){
+        return myDominoList.get(index);
+    }
+
+    public DataDomino remove(int index){
+        return myDominoList.remove(index);
+    }
+
+    public void updateList(JDomino master) {
+        myDominoList.clear();
+        myDominoList.addAll(master.getMyDominoList());
+    }
+
+    public boolean add(DataDomino incoming){
+        myDominoList.add(incoming);
+        return true;
+    }
+    public String toString(){
+        return myDominoList.toString();
     }
 }
