@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26472220-d1c8-41f4-88b4-a850b1d79c41" name="Default" comment="">
+    <list default="true" id="26472220-d1c8-41f4-88b4-a850b1d79c41" name="Default" comment="Started implementing JTable stuff">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/P01.iml" afterPath="$PROJECT_DIR$/P01.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataDomino.java" afterPath="$PROJECT_DIR$/src/DataDomino.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominos.java" afterPath="$PROJECT_DIR$/src/Dominos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JDomino.java" afterPath="$PROJECT_DIR$/src/JDomino.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JPlayer.java" afterPath="$PROJECT_DIR$/src/JPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JTable.java" afterPath="$PROJECT_DIR$/src/JTable.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -349,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524116964056</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Started implementing JTable stuff">
+      <created>1524249618344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524249618345</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -364,7 +365,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845187" sideWeight="0.50238097" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32845187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32845187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -389,7 +390,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed the issue we had of making every domino [6|6]. However, still incorrect output." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the issue we had of making every domino [6|6]. However, still incorrect output." />
+    <MESSAGE value="Started implementing JTable stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started implementing JTable stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
