@@ -1,5 +1,3 @@
-package dominosprojectcs380;
-
 /**
  * DOMINOES RULES THAT OUR CODE FOLLOWS
  * Game starts by having players draw 10 dominoes each.
