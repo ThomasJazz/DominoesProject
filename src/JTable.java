@@ -1,3 +1,4 @@
+package dominosprojectcs380;
 import java.util.*;
 
 
@@ -71,8 +72,9 @@ public class JTable {
     // Prints out the whole game.
     public void printGame()
     {
-        System.out.println("*********** Dominos In Play ***********\n");
+        System.out.println("***************************************************");
+        System.out.println("***************** Dominos In Play *****************");
+        System.out.println("***************************************************\n");
         System.out.println(dominos);
-        System.out.println();
     }
 }
